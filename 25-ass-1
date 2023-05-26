@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	  char str[100];
+	  int i=0,wrd,dig,alp,splch,ch,lwrch;
+	  wrd=dig=alp=splch=lwrch=0;
+	  gets(str);
+	  while(str[i]!='\0')
+	  {
+	  	ch=str[i];
+	  	if(ch==' ')
+	  	wrd++;
+	  	else if(ch>='a'&&ch<='z')
+	  	lwrch++;
+	  	else if((ch>='a'&&ch<='z')||(ch>='A'&&ch<='Z'))
+	  	alp++;
+	    else if(ch>='0'&&ch<='9')
+	  	dig++;
+	  	else
+	  	splch++;
+	  	i++;
+	  }
+	  /*printf("\nWords : %d",wrd+1);
+	  printf("\nDigits : %d",dig);
+	  printf("\nAlphabets : %d",alp+lwrch);*/
+	  printf("\nSpecial characters : %d",splch);
+	  printf("\nLower case characters : %d",lwrch);
+}
